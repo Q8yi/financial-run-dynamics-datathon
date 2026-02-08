@@ -28,9 +28,24 @@ python -m venv venv
 ```bash
 pip install -r requirements.txt
 ```
-## Ensure Datasets are in the /datasets folder
+
+## Datasets Folder Structure
+
+### Ensure Datasets are in the /datasets folder with the following structure:
+```
+datasets/
+    ERC20-stablecoins.zip
+    gfc.zip
+```
 
 ## Run the notebooks in numerical order to ensure proper data flow:
--  01_data_cleaning.ipynb – data cleaning and preprocessing
--  02_eda.ipynb – exploratory data analysis
+1)  01_data_cleaning.ipynb – data cleaning and preprocessing
+2)  02_q1_part1.ipynb – exploratory data analysis to Identify when confidence begins to break down in the Terra-Luna stablecoin run (2022) and
+the Reserve Primary Fund run (2008)
+3)  03_q1_part2.ipynb – exploratory data analysis to understand how does stress first become visible
+4)  04_q1_part3.ipynb – exploratory data analysis to understand how does
+panic propagate across participants in each case
+5)  05_q2_gfc.ipynb - exploratory data analysis to Identify which parties suffer losses in each crisis. Explain why the system could not protect
+them and how differences in design made the outcomes more or less severe for GFC related data
+6)  06_q2_terraluna.ipynb - exploratory data analysis to Identify which parties suffer losses in each crisis. Explain why the system could not protect them and how differences in design made the outcomes more or less severe for Crypto tokens related data
 
