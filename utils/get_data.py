@@ -18,6 +18,10 @@ def get_processed_files(folder):
         if filename.endswith(".csv"):
             file_path = os.path.join(folder, filename)
             df = pd.read_csv(file_path)
+            if "date_standardized" in df.columns:
+                df["date_standardized"] = pd.to_datetime(df["date_standardized"])
+            elif "date" in df.columns:
+                df["date"] = pd.to_datetime(df["date"])
             key = filename.split("processed_")[-1].replace(".csv", "")
             dfs[key] = df
     return dfs
